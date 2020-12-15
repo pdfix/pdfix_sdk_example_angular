@@ -1,0 +1,1600 @@
+enum PdfAuthPlatform {
+  "kAuthPlatformWin",
+  "kAuthPlatformMac",
+  "kAuthPlatformLinux",
+  "kAuthPlatformAndroid",
+  "kAuthPlatformiOS",
+  "kAuthPlatformServer",
+};
+
+enum PdfAuthOption {
+  "kAuthOptionBasic",
+  "kAuthOptionProfessional",
+  "kAuthOptionEnterprise",
+  "kAuthOptionDeveloper",
+  "kAuthOptionTrial",
+  "kAuthOptionLite",
+};
+
+enum PdfEventType {
+  "kEventUnknown",
+  "kEventDocWillSave",
+  "kEventDocWillClose",
+  "kEventDocDidOpen",
+  "kEventDocDidSave",
+  "kEventDocWillChangePages",
+  "kEventDocDidChangePages",
+  "kEventDocWillDeletePages",
+  "kEventDocDidDeletePages",
+  "kEventDocWillInsertPages",
+  "kEventDocDidInsertPages",
+  "kEventDocWillMovePages",
+  "kEventDocDidMovePages",
+  "kEventDocWillReplacePages",
+  "kEventDocDidReplacePages",
+  "kEventAnnotWillChange",
+  "kEventAnnotDidChange",
+  "kEventPageWillAddAnnot",
+  "kEventPageWillRemoveAnnot",
+  "kEventPageDidAddAnnot",
+  "kEventPageDidRemoveAnnot",
+  "kEventPageContentsDidChange",
+};
+
+enum PdfDigSigValidState {
+  "kDigSigBlank",
+  "kDigSigUnknown",
+  "kDigSigInvalid",
+  "kDigSigValid",
+  "kDigSigDoubleChecked",
+  "kDigSigValidStateEnumSize",
+};
+
+enum PdfAlignment {
+  "kAlignmentNone",
+  "kAlignmentLeft",
+  "kAlignmentRight",
+  "kAlignmentJustify",
+  "kAlignmentTop",
+  "kAlignmentBottom",
+  "kAlignmentCenter",
+};
+
+enum PdfRotate {
+  "kRotate0",
+  "kRotate90",
+  "kRotate180",
+  "kRotate270",
+};
+
+enum PdfObjectType {
+  "kPdsUnknown",
+  "kPdsBoolean",
+  "kPdsNumber",
+  "kPdsString",
+  "kPdsName",
+  "kPdsArray",
+  "kPdsDictionary",
+  "kPdsStream",
+  "kPdsNull",
+  "kPdsReference",
+};
+
+enum PdfPageObjectType {
+  "kPdsPageUnknown",
+  "kPdsPageText",
+  "kPdsPagePath",
+  "kPdsPageImage",
+  "kPdsPageShading",
+  "kPdsPageForm",
+};
+
+enum PdfElementType {
+  "kPdeUnknown",
+  "kPdeText",
+  "kPdeTextLine",
+  "kPdeWord",
+  "kPdeTextRun",
+  "kPdeImage",
+  "kPdeContainer",
+  "kPdeList",
+  "kPdeLine",
+  "kPdeRect",
+  "kPdeTable",
+  "kPdeCell",
+  "kPdeToc",
+  "kPdeFormField",
+  "kPdeHeader",
+  "kPdeFooter",
+  "kPdeAnnot",
+};
+
+enum PdfContainerType {
+  "kPdeContainerUnknown",
+  "kPdeContainerPage",
+  "kPdeContainerArt",
+  "kPdeContainerCol",
+  "kPdeContainerRow",
+  "kPdeContainerSplitter",
+};
+
+enum PdfTagType {
+  "kTagUnknown",
+  "kTagSect",
+  "kTagArt",
+};
+
+enum PdfLineCap {
+  "kPdfLineCapButt",
+  "kPdfLineCapRound",
+  "kPdfLineCapSquare",
+};
+
+enum PdfLineJoin {
+  "kPdfLineJoinMiter",
+  "kPdfLineJoinRound",
+  "kPdfLineJoinBevel",
+};
+
+enum PdfFillType {
+  "kFillTypeNone",
+  "kFillTypeSolid",
+  "kFillTypePattern",
+};
+
+enum PdfTextAlignment {
+  "kTextAlignmentNone",
+  "kTextAlignmentLeft",
+  "kTextAlignmentRight",
+  "kTextAlignmentCenter",
+  "kTextAlignmentJustify",
+};
+
+enum PdfAnnotSubtype {
+  "kAnnotUnknown",
+  "kAnnotText",
+  "kAnnotLink",
+  "kAnnotFreeText",
+  "kAnnotLine",
+  "kAnnotSquare",
+  "kAnnotCircle",
+  "kAnnotPolygon",
+  "kAnnotPolyLine",
+  "kAnnotHighlight",
+  "kAnnotUnderline",
+  "kAnnotSquiggly",
+  "kAnnotStrikeOut",
+  "kAnnotStamp",
+  "kAnnotCaret",
+  "kAnnotInk",
+  "kAnnotPopup",
+  "kAnnotFileAttachment",
+  "kAnnotSound",
+  "kAnnotMovie",
+  "kAnnotWidget",
+  "kAnnotScreen",
+  "kAnnotPrinterMark",
+  "kAnnotTrapNet",
+  "kAnnotWatermark",
+  "kAnnot3D",
+  "kAnnotRedact",
+};
+
+enum PdfBorderStyle {
+  "kBorderSolid",
+  "kBorderDashed",
+  "kBorderBeveled",
+  "kBorderInset",
+  "kBorderUnderline",
+};
+
+enum PdfFieldType {
+  "kFieldUnknown",
+  "kFieldButton",
+  "kFieldRadio",
+  "kFieldCheck",
+  "kFieldText",
+  "kFieldCombo",
+  "kFieldList",
+  "kFieldSignature",
+};
+
+enum PdfActionEventType {
+  "kActionEventAnnotEnter",
+  "kActionEventAnnotExit",
+  "kActionEventAnnotMouseDown",
+  "kActionEventAnnotMouseUp",
+  "kActionEventAnnotFocus",
+  "kActionEventAnnotBlur",
+  "kActionEventAnnotPageOpen",
+  "kActionEventAnnotPageClose",
+  "kActionEventAnnotPageVisible",
+  "kActionEventAnnotPageInvisible",
+  "kActionEventPageOpen",
+  "kActionEventPageClose",
+  "kActionEventFieldKeystroke",
+  "kActionEventFieldFormat",
+  "kActionEventFieldValidate",
+  "kActionEventFieldCalculate",
+  "kActionEventDocWillClose",
+  "kActionEventDocWillSave",
+  "kActionEventDocDidSave",
+  "kActionEventDocWillPrint",
+  "kActionEventDocDidPrint",
+};
+
+enum PdfActionType {
+  "kActionUnknown",
+  "kActionGoTo",
+  "kActionGoToR",
+  "kActionGoToE",
+  "kActionLaunch",
+  "kActionThread",
+  "kActionURI",
+  "kActionSound",
+  "kActionMovie",
+  "kActionHide",
+  "kActionNamed",
+  "kActionSubmitForm",
+  "kActionResetForm",
+  "kActionImportData",
+  "kActionJavaScript",
+  "kActionSetOCGState",
+  "kActionRendition",
+  "kActionTrans",
+  "kActionGoTo3DView",
+};
+
+enum PdfImageFormat {
+  "kImageFormatPng",
+  "kImageFormatJpg",
+  "kImageFormatBmp",
+  "kImageFormatEmf",
+};
+
+enum PdfFontCharset {
+  "kFontAnsiCharset",
+  "kFontDefaultCharset",
+  "kFontSymbolCharset",
+  "kFontUnknownCharset",
+  "kFontMacintoshCharset",
+  "kFontShiftJISCharset",
+  "kFontHangeulCharset",
+  "kFontKoreanCharset",
+  "kFontGB2312Charset",
+  "kFontCHineseBig5Charset",
+  "kFontGreekCharset",
+  "kFontTurkishCharset",
+  "kFontVietnameseCharset",
+  "kFontHebrewCharset",
+  "kFontArabicCharset",
+  "kFontArabicTCharset",
+  "kFontArabicUCharset",
+  "kFontHebrewUCharset",
+  "kFontBalticCharset",
+  "kFontRussianCharset",
+  "kFontThaiCharset",
+  "kFontEastEuropeCharset",
+};
+
+enum PdfPageRangeType {
+  "kAllPages",
+  "kEvenPagesOnly",
+  "kOddPagesOnly",
+};
+
+enum PdfFontType {
+  "kFontUnknownType",
+  "kFontType1",
+  "kFontTrueType",
+  "kFontType3",
+  "kFontCIDFont",
+};
+
+enum PdfFontFormat {
+  "kFontFormatTtf",
+  "kFontFormatWoff",
+};
+
+enum PdfDestZoomType {
+  "kPdfZoomXYZ",
+  "kPdfZoomFitPage",
+  "kPdfZoomFitHorz",
+  "kPdfZoomFitVert",
+  "kPdfZoomFitRect",
+  "kPdfZoomFitBbox",
+  "kPdfZoomFitBHorz",
+  "kPdfZoomFitBVert",
+};
+
+enum PdfDigSigType {
+  "kDigSigOpenSSL",
+  "kDigSigCert",
+  "kDigSigCustom",
+};
+
+enum PdfImageType {
+  "kImageFigure",
+  "kImageImage",
+  "kImagePath",
+  "kImageRect",
+  "kImageShading",
+  "kImageForm",
+};
+
+enum PdfListType {
+  "kListNone",
+  "kListUnordered",
+  "kListOrdered",
+  "kListDecimal",
+  "kListRomanUpper",
+  "kListRomanLower",
+  "kListLetterUpper",
+  "kListLetterLower",
+};
+
+enum PdfTextStyle {
+  "kTextNormal",
+  "kTextH1",
+  "kTextH2",
+  "kTextH3",
+  "kTextH4",
+  "kTextH5",
+  "kTextH6",
+  "kTextH7",
+  "kTextH8",
+  "kTextNote",
+  "kTextTitle",
+};
+
+enum PsFileMode {
+  "kPsWrite",
+  "kPsReadOnly",
+  "kPsTruncate",
+};
+
+enum PdfAlternateType {
+  "kAlternatePdf",
+  "kAlternateHtml",
+};
+
+enum PdfMediaType {
+  "kCSSMediaTypeAll",
+  "kCSSMediaTypePrint",
+  "kCSSMediaTypeScreen",
+  "kCSSMediaTypeSpeech",
+};
+
+enum PsImageDIBFormat {
+  "kImageDIBFormatArgb",
+};
+
+enum PsDataFormat {
+  "kDataFormatJson",
+  "kDataFormatXml",
+  "kDataFormatTxt",
+};
+
+enum PdfStreamType {
+  "kFileStream",
+  "kMemoryStream",
+  "kProcStream",
+};
+
+enum PdfStructElementType {
+  "kPdsStructKidInvalid",
+  "kPdsStructKidElement",
+  "kPdsStructKidPageContent",
+  "kPdsStructKidStreamContent",
+  "kPdsStructKidObject",
+};
+
+enum PdfAuthorizationType {
+  "kAuthorizationStandard",
+  "kAuthorizationAccount",
+};
+
+enum PdfDestFitType {
+  "kDestFitUnknown",
+  "kDestFitXYZ",
+  "kDestFit",
+  "kDestFitH",
+  "kDestFitV",
+  "kDestFitR",
+  "kDestFitB",
+  "kDestFitBH",
+  "kDestFitBV",
+};
+
+enum PdfLabelType {
+  "kLabelNo",
+  "kLabelNone",
+  "kLabel",
+  "kLabelLevel1",
+  "kLabelLevel2",
+  "kLabelLevel3",
+  "kLabelLevel4",
+};
+
+enum PsCommandStatus {
+  "kAVCommandReady",
+  "kAVCommandWorking",
+  "kAVCommandDone",
+  "kAVCommandCanceled",
+  "kAVCommandInError",
+};
+
+enum PdfAnnotAppearanceMode {
+  "kAppearanceNormal",
+  "kAppearanceRollover",
+  "kAppearanceDown",
+};
+
+enum PdsPathPointType {
+  "kPathLineTo",
+  "kPathBezierTo",
+  "kPathMoveTo",
+};
+
+enum PdfBlendMode {
+  "kBlendModeNormal",
+  "kBlendModeMultiply",
+  "kBlendModeScreen",
+  "kBlendModeOverlay",
+  "kBlendModeDarken",
+  "kBlendModeLighten",
+  "kBlendModeColorDodge",
+  "kBlendModeColorBurn",
+  "kBlendModeHardLight",
+  "kBlendModeSoftLight",
+  "kBlendModeDifference",
+  "kBlendModeExclusion",
+  "kBlendModeHue",
+  "kBlendModeSaturation",
+  "kBlendModeColor",
+  "kBlendModeLuminosity",
+};
+
+enum PdfFillRule {
+  "kFillRuleNone",
+  "kFillRuleEvenOdd",
+  "kFillRuleWinding",
+};
+
+enum PdfixEnum {
+  "kSaveIncremental",
+  "kSaveFull",
+  "kSaveUncompressed",
+  "kSaveCompressedStructureOnly",
+  "kAnnotFlagNone",
+  "kAnnotFlagInvisible",
+  "kAnnotFlagHidden",
+  "kAnnotFlagPrint",
+  "kAnnotFlagNoZoom",
+  "kAnnotFlagNoRotate",
+  "kAnnotFlagNoView",
+  "kAnnotFlagReadOnly",
+  "kAnnotFlagLocked",
+  "kAnnotFlagToggleNoView",
+  "kAnnotFlagLockedContents",
+  "kRemoveAnnotSingle",
+  "kRemoveAnnotPopup",
+  "kRemoveAnnotReply",
+  "kTextFlagNone",
+  "kTextFlagUnderline",
+  "kTextFlagStrikeout",
+  "kTextFlagHighlight",
+  "kTextFlagSubscript",
+  "kTextFlagSuperscript",
+  "kTextFlagNoUnicode",
+  "kTextFlagPatternFill",
+  "kTextFlagPatternStroke",
+  "kTextFlagWhiteSpace",
+  "kTextFlagUnicode",
+  "kFieldFlagNone",
+  "kFieldFlagReadOnly",
+  "kFieldFlagRequired",
+  "kFieldFlagNoExport",
+  "kFieldFlagMultiline",
+  "kFieldFlagPassword",
+  "kFieldFlagNoToggleToOff",
+  "kFieldFlagRadio",
+  "kFieldFlagPushButton",
+  "kFieldFlagCombo",
+  "kFieldFlagEdit",
+  "kFieldFlagSort",
+  "kFieldFlagMultiSelect",
+  "kFieldFlagDoNotSpellCheck",
+  "kFieldFlagDCommitOnSelChange",
+  "kFieldFlagFileSelect",
+  "kFieldFlagDoNotScroll",
+  "kFieldFlagComb",
+  "kFieldFlagRichText",
+  "kFieldFlagRadiosInUnison",
+  "kRenderAnnot",
+  "kRenderLCDText",
+  "kRenderNoNativeText",
+  "kRenderGrayscale",
+  "kRenderLimitedCache",
+  "kRenderForceHalftone",
+  "kRenderPrinting",
+  "kRenderNoText",
+  "kRenderNoBackground",
+  "kFontFixedPitch",
+  "kFontSerif",
+  "kFontSymbolic",
+  "kFontScript",
+  "kFontNotSymbolic",
+  "kFontItalic",
+  "kFontAllCap",
+  "kFontSmallCap",
+  "kFontForceBold",
+  "kContentImage",
+  "kContentText",
+  "kContentPath",
+  "kContentForm",
+  "kContentShading",
+  "kContentTextTransparent",
+  "kContentTextFill",
+  "kContentTextStroke",
+  "kTableUnknown",
+  "kTableGraphic",
+  "kTableIsolated",
+  "kTableIsolatedCol",
+  "kTableIsolatedRow",
+  "kTableForm",
+  "kTableElement",
+  "kWordFlagHyphen",
+  "kWordFlagBullet",
+  "kWordFlagColon",
+  "kWordFlagNumber",
+  "kWordFlagSubscript",
+  "kWordFlagSupercript",
+  "kWordFlagTerminal",
+  "kWordFlagFirstCap",
+  "kWordFlagImage",
+  "kWordFlagNumberingDecimal",
+  "kWordFlagNumberingRoman",
+  "kWordFlagNumberingLetter",
+  "kWordFlagPageNumber",
+  "kWordFlagFilling",
+  "kWordFlagAllCaps",
+  "kWordFlagComma",
+  "kWordFlagNoUnicode",
+  "kWordFlagLetter",
+  "kTextLineFlagHyphen",
+  "kTextLineFlagNewLine",
+  "kTextLineFlagIndent",
+  "kTextLineFlagTerminal",
+  "kTextLineFlagDropCap",
+  "kTextLineFlagFilling",
+  "kTextLineFlagAllCaps",
+  "kTextFlagTableCaption",
+  "kTextFlagImageCaption",
+  "kTextFlagChartCaption",
+  "kTextFlagNoteCaption",
+  "kTextFlagFilling",
+  "kTextFlagAllCaps",
+  "kElemNoJoin",
+  "kElemNoSplit",
+  "kElemArtifact",
+  "kElemHeader",
+  "kElemFooter",
+  "kElemSplitter",
+  "kElemNoTable",
+  "kElemTable",
+  "kElemWordSplitter",
+  "kPageInsertNone",
+  "kPageInsertBookmarks",
+  "kPageInsertAll",
+  "kContentToPage",
+  "kContentToForm",
+  "kContentToCharproc",
+};
+
+interface PdfPageRangeParams {
+  attribute long start_page;
+  attribute long end_page;
+  attribute PdfPageRangeType page_range_spec;
+  void _PdfPageRangeParams();
+};
+
+interface PdfWatermarkParams {
+  [Value] attribute PdfPageRangeParams page_range;
+  attribute long order_top;
+  attribute PdfAlignment h_align;
+  attribute PdfAlignment v_align;
+  attribute long percentage_vals;
+  attribute double h_value;
+  attribute double v_value;
+  attribute double scale;
+  attribute double rotation;
+  attribute double opacity;
+  void _PdfWatermarkParams();
+};
+
+interface PdfPoint {
+  attribute double x;
+  attribute double y;
+  void _PdfPoint();
+};
+
+interface PdfDevPoint {
+  attribute long x;
+  attribute long y;
+  void _PdfDevPoint();
+};
+
+interface PdfRect {
+  attribute double left;
+  attribute double top;
+  attribute double right;
+  attribute double bottom;
+  void _PdfRect();
+};
+
+interface PdfDevRect {
+  attribute long left;
+  attribute long top;
+  attribute long right;
+  attribute long bottom;
+  void _PdfDevRect();
+};
+
+interface PdfQuad {
+  [Value] attribute PdfPoint tl;
+  [Value] attribute PdfPoint tr;
+  [Value] attribute PdfPoint bl;
+  [Value] attribute PdfPoint br;
+  void _PdfQuad();
+};
+
+interface PdfDevQuad {
+  [Value] attribute PdfDevPoint tl;
+  [Value] attribute PdfDevPoint tr;
+  [Value] attribute PdfDevPoint bl;
+  [Value] attribute PdfDevPoint br;
+  void _PdfDevQuad();
+};
+
+interface PdfMatrix {
+  attribute double a;
+  attribute double b;
+  attribute double c;
+  attribute double d;
+  attribute double e;
+  attribute double f;
+  void _PdfMatrix();
+};
+
+interface PdfRGB {
+  attribute long r;
+  attribute long g;
+  attribute long b;
+  void _PdfRGB();
+};
+
+interface PdfColorState {
+  attribute PdfFillType fill_type;
+  attribute PdfFillType stroke_type;
+  [Value] attribute PdfRGB fill_color;
+  [Value] attribute PdfRGB stroke_color;
+  attribute long fill_opacity;
+  attribute long stroke_opacity;
+  void _PdfColorState();
+};
+
+interface PdfTextState {
+  [Value] attribute PdfColorState color_state;
+  attribute PdfFont font;
+  attribute double font_size;
+  attribute double char_spacing;
+  attribute double word_spacing;
+  attribute long flags;
+  void _PdfTextState();
+};
+
+interface PdfGraphicState {
+  [Value] attribute PdfColorState color_state;
+  attribute double line_width;
+  attribute double miter_limit;
+  attribute PdfLineCap line_cap;
+  attribute PdfLineJoin line_join;
+  attribute PdfBlendMode blend_mode;
+  [Value] attribute PdfMatrix matrix;
+  void _PdfGraphicState();
+};
+
+interface PdfFontState {
+  attribute PdfFontType type;
+  attribute long flags;
+  [Value] attribute PdfRect bbox;
+  attribute long ascent;
+  attribute long descent;
+  attribute long italic;
+  attribute long bold;
+  attribute long fixed_width;
+  attribute long vertical;
+  attribute long embedded;
+  attribute long height;
+  void _PdfFontState();
+};
+
+interface PdfPageRenderParams {
+  attribute VoidPtr device;
+  attribute PsImage image;
+  [Value] attribute PdfMatrix matrix;
+  [Value] attribute PdfRect clip_box;
+  attribute long render_flags;
+  void _PdfPageRenderParams();
+};
+
+interface PdfAnnotAppearance {
+  [Value] attribute PdfRGB fill_color;
+  attribute PdfFillType fill_type;
+  [Value] attribute PdfRGB border_color;
+  attribute double border_width;
+  attribute PdfBorderStyle border;
+  attribute double opacity;
+  attribute double font_size;
+  attribute PdfTextAlignment text_align;
+  void _PdfAnnotAppearance();
+};
+
+interface PdfBookmarkAppearance {
+  [Value] attribute PdfRGB color;
+  attribute long italic;
+  attribute long bold;
+  void _PdfBookmarkAppearance();
+};
+
+interface PdfWhitespaceParams {
+  attribute double width;
+  attribute double height;
+  void _PdfWhitespaceParams();
+};
+
+interface PdfFlattenAnnotsParams {
+  [Value] attribute PdfPageRangeParams page_range;
+  attribute PdfAnnotSubtype subtype;
+  void _PdfFlattenAnnotsParams();
+};
+
+interface PdfMediaQueryParams {
+  attribute PdfMediaType type;
+  attribute long min_width;
+  void _PdfMediaQueryParams();
+};
+
+interface PdfImageParams {
+  attribute PdfImageFormat format;
+  attribute long quality;
+  void _PdfImageParams();
+};
+
+interface PdfAccessibleParams {
+  attribute long accept_tags;
+  attribute long embed_fonts;
+  attribute long subset_fonts;
+  attribute long create_bookmarks;
+  void _PdfAccessibleParams();
+};
+
+interface PdsContentParams {
+  attribute long flags;
+  attribute long form_type;
+  [Value] attribute PdfRect bbox;
+  [Value] attribute PdfMatrix matrix;
+  void _PdsContentParams();
+};
+
+interface PdfCancelProc {};
+interface PdfEventProc {};
+interface PdfDigestDataProc {};
+interface PsStreamReadProc {};
+interface PsStreamWriteProc {};
+interface PsStreamDestroyProc {};
+interface PsStreamGetSizeProc {};
+
+interface PdsObject {
+  PdfObjectType GetObjectType();
+  long GetId();
+};
+
+interface PdsBoolean {
+  boolean GetValue();
+};
+PdsBoolean implements PdsObject;
+
+interface PdsNumber {
+  boolean IsIntegerValue();
+  long GetIntegerValue();
+  double GetValue();
+};
+PdsNumber implements PdsObject;
+
+interface PdsString {
+  long GetValue(octet[] _buffer, long _len);
+  long GetText(octet[] _buffer, long _len);
+};
+PdsString implements PdsObject;
+
+interface PdsName {
+  long GetValue(octet[] _buffer, long _len);
+  long GetText(octet[] _buffer, long _len);
+};
+PdsName implements PdsObject;
+
+interface PdsArray {
+  long GetNumObjects();
+  PdsObject Get(long _index);
+  boolean Put(long _index, PdsObject _value);
+  boolean PutNumber(long _index, double _value);
+  boolean PutName(long _index, octet[] _value);
+  boolean Insert(long _index, PdsObject _value);
+  PdsDictionary InsertDict(long _index);
+  PdsArray InsertArray(long _index);
+  boolean RemoveNth(long _index);
+  PdsDictionary GetDictionary(long _index);
+  PdsArray GetArray(long _index);
+  PdsStream GetStream(long _index);
+  long GetString(long _index, octet[] _buffer, long _len);
+  long GetText(long _index, octet[] _buffer, long _len);
+  double GetNumber(long _index);
+  long GetInteger(long _index);
+};
+PdsArray implements PdsObject;
+
+interface PdsDictionary {
+  boolean Known(octet[] _key);
+  long GetNumKeys();
+  long GetKey(long _index, octet[] _buffer, long _len);
+  PdsObject Get(octet[] _key);
+  boolean Put(octet[] _key, PdsObject _value);
+  boolean PutBool(octet[] _key, boolean _value);
+  boolean PutName(octet[] _key, octet[] _value);
+  boolean PutString(octet[] _key, octet[] _value);
+  boolean PutNumber(octet[] _key, double _value);
+  boolean PutRect(octet[] _key, PdfRect _rect);
+  boolean PutMatrix(octet[] _key, PdfMatrix _matrix);
+  PdsDictionary PutDict(octet[] _key);
+  PdsArray PutArray(octet[] _key);
+  PdsDictionary GetDictionary(octet[] _key);
+  PdsArray GetArray(octet[] _key);
+  PdsStream GetStream(octet[] _key);
+  long GetString(octet[] _key, octet[] _buffer, long _len);
+  long GetText(octet[] _key, octet[] _buffer, long _len);
+  double GetNumber(octet[] _key);
+  long GetInteger(octet[] _key, long _default_value);
+  boolean GetBoolean(octet[] _key, boolean _default_value);
+};
+PdsDictionary implements PdsObject;
+
+interface PdsStream {
+  PdsDictionary GetStreamDict();
+  long GetRawDataSize();
+  boolean IsEof();
+  long GetSize();
+  boolean Read(long _offset, octet[] _buffer, long _size);
+  long GetPos();
+};
+PdsStream implements PdsObject;
+
+interface PdsNull {
+};
+PdsNull implements PdsObject;
+
+interface PdsContent {
+  long GetNumObjects();
+  PdsPageObject GetObject(long _index);
+  void Release();
+};
+
+interface PdsPageObject {
+  PdfPageObjectType GetObjectType();
+  void GetBBox(PdfRect _bbox);
+  long GetId();
+  void SetRender(boolean _render);
+  PdsObject GetStructObject(boolean _struct_parent);
+  PdsContentMark GetContentMark();
+  PdfPage GetPage();
+  boolean GetGState(PdfGraphicState _g_state);
+};
+
+interface PdsText {
+  long GetText(octet[] _buffer, long _len);
+  boolean GetTextState(PdfDoc _doc, PdfTextState _text_state);
+};
+PdsText implements PdsPageObject;
+
+interface PdsForm {
+  PdsContent AcquireContent();
+};
+PdsForm implements PdsPageObject;
+
+interface PdsPath {
+  long GetNumPathPoints();
+  PdsPathPoint GetPathPoint(long _index);
+};
+PdsPath implements PdsPageObject;
+
+interface PdsPathPoint {
+  PdsPathPointType GetType();
+  boolean GetPoint(PdfPoint _point);
+  boolean IsClosed();
+};
+
+interface PdsImage {
+  PdsStream GetDataStm();
+};
+PdsImage implements PdsPageObject;
+
+interface PdsShading {
+};
+PdsShading implements PdsPageObject;
+
+interface PdsContentMark {
+  long GetNumTags();
+  long GetTagName(long _index, octet[] _buffer, long _len);
+  PdsDictionary GetTagObject(long _index);
+  long GetTagMcid();
+  boolean GetTagArtifact();
+  boolean AddTag([Const] DOMString _name, PdsDictionary _object, boolean _indirect);
+  boolean RemoveTag(long _index);
+};
+
+interface PdeElement {
+  PdfElementType GetType();
+  void GetBBox(PdfRect _bbox);
+  boolean SetBBox(PdfRect _bbox);
+  long GetId();
+  void GetGraphicState(PdfGraphicState _g_state);
+  long GetNumChildren();
+  PdeElement GetChild(long _index);
+  PdfAlignment GetAlignment();
+  double GetAngle();
+  void SetRender(boolean _render);
+  void SetData(VoidPtr _data);
+  VoidPtr GetData();
+  boolean SetAlt(octet[] _alt);
+  boolean SetActualText(octet[] _text);
+  long GetFlags();
+  boolean SetFlags(long _flags);
+  long GetNumPageObjects();
+  PdsPageObject GetPageObject(long _index);
+  PdePageMap GetPageMap();
+};
+
+interface PdeContainer {
+};
+PdeContainer implements PdeElement;
+
+interface PdeList {
+};
+PdeList implements PdeElement;
+
+interface PdeToc {
+};
+PdeToc implements PdeContainer;
+
+interface PdeAnnot {
+  PdfAnnot GetAnnot();
+};
+PdeAnnot implements PdeElement;
+
+interface PdeFormField {
+};
+PdeFormField implements PdeAnnot;
+
+interface PdeImage {
+  PdfImageType GetImageType();
+  PdeElement GetCaption();
+};
+PdeImage implements PdeContainer;
+
+interface PdeLine {
+};
+PdeLine implements PdeElement;
+
+interface PdeRect {
+};
+PdeRect implements PdeContainer;
+
+interface PdeHeader {
+};
+PdeHeader implements PdeContainer;
+
+interface PdeFooter {
+};
+PdeFooter implements PdeContainer;
+
+interface PdeCell {
+  long GetRowSpan();
+  long GetColSpan();
+  boolean HasBorderGraphicState(long _index);
+  PdeCell GetSpanCell();
+};
+PdeCell implements PdeContainer;
+
+interface PdeTable {
+  long GetNumRows();
+  long GetNumCols();
+  PdeCell GetCell(long _row, long _col);
+  PdfAlignment GetRowAlignment(long _row);
+  PdfAlignment GetColAlignment(long _col);
+  PdeElement GetCaption();
+  long GetTableType();
+};
+PdeTable implements PdeContainer;
+
+interface PdeWord {
+  long GetText(octet[] _buffer, long _len);
+  boolean HasTextState();
+  void GetTextState(PdfTextState _text_state);
+  long GetNumChars();
+  long GetCharCode(long _index);
+  long GetCharText(long _index, octet[] _buffer, long _len);
+  void GetCharTextState(long _index, PdfTextState _text_state);
+  void GetCharBBox(long _index, PdfRect _bbox);
+  long GetWordFlags();
+  PdeElement GetBackground();
+  void GetOrigin(PdfPoint _point);
+};
+PdeWord implements PdeElement;
+
+interface PdeTextLine {
+  long GetText(octet[] _buffer, long _len);
+  boolean HasTextState();
+  void GetTextState(PdfTextState _text_state);
+  long GetNumWords();
+  PdeWord GetWord(long _index);
+  long GetTextLineFlags();
+};
+PdeTextLine implements PdeElement;
+
+interface PdeText {
+  long GetText(octet[] _buffer, long _len);
+  boolean HasTextState();
+  void GetTextState(PdfTextState _text_state);
+  long GetNumTextLines();
+  PdeTextLine GetTextLine(long _index);
+  long GetNumWords();
+  PdeWord GetWord(long _index);
+  double GetLineSpacing();
+  double GetIndent();
+  PdfTextStyle GetTextStyle();
+  long GetTextFlags();
+  long GetLabelLevel();
+  boolean SetLabelLevel(long _level);
+};
+PdeText implements PdeElement;
+
+interface PdfAction {
+  PdfActionType GetSubtype();
+  long GetJavaScript(octet[] _buffer, long _len);
+  long GetDestFile(octet[] _buffer, long _len);
+  PdfViewDestination GetViewDestination();
+};
+
+interface PdfAnnot {
+  PdfAnnotSubtype GetSubtype();
+  long GetFlags();
+  void GetAppearance(PdfAnnotAppearance _appearance);
+  PdsStream GetAppearanceXObject(PdfAnnotAppearanceMode _mode);
+  boolean SetAppearanceFromXObject(PdsStream _xobj, PdfAnnotAppearanceMode _mode);
+  void GetBBox(PdfRect _bbox);
+  boolean PointInAnnot(PdfPoint _point);
+  boolean RectInAnnot(PdfRect _rect);
+  PdsObject GetStructObject(boolean _struct_parent);
+  PdsDictionary GetObject();
+  void NotifyWillChange(octet[] _key);
+  void NotifyDidChange(octet[] _key, long _err);
+};
+
+interface PdfLinkAnnot {
+  long GetNumQuads();
+  void GetQuad(long _index, PdfQuad _quad);
+  boolean AddQuad(PdfQuad _quad);
+  boolean RemoveQuad(long _index);
+  PdfAction GetAction();
+};
+PdfLinkAnnot implements PdfAnnot;
+
+interface PdfMarkupAnnot {
+  long GetContents(octet[] _buffer, long _len);
+  boolean SetContents(octet[] _contents);
+  long GetAuthor(octet[] _buffer, long _len);
+  boolean SetAuthor(octet[] _author);
+  long GetNumReplies();
+  PdfAnnot GetReply(long _index);
+  PdfAnnot AddReply(octet[] _author, octet[] _text);
+};
+PdfMarkupAnnot implements PdfAnnot;
+
+interface PdfTextAnnot {
+};
+PdfTextAnnot implements PdfMarkupAnnot;
+
+interface PdfTextMarkupAnnot {
+  long GetNumQuads();
+  void GetQuad(long _index, PdfQuad _quad);
+  boolean AddQuad(PdfQuad _quad);
+  boolean RemoveQuad(long _index);
+};
+PdfTextMarkupAnnot implements PdfMarkupAnnot;
+
+interface PdfWidgetAnnot {
+  long GetCaption(octet[] _buffer, long _len);
+  long GetFontName(octet[] _buffer, long _len);
+  PdfAction GetAction();
+  PdfAction GetAAction(PdfActionEventType _event);
+  PdfFormField GetFormField();
+};
+PdfWidgetAnnot implements PdfAnnot;
+
+interface PdfViewDestination {
+  long GetPageNum(PdfDoc _doc);
+  PdfDestFitType GetFitType();
+  void GetBBox(PdfRect _bbox);
+  double GetZoom();
+  PdsArray GetObject();
+};
+
+interface PdfBaseDigSig {
+  void Destroy();
+  boolean SetReason(octet[] _reason);
+  boolean SetLocation(octet[] _location);
+  boolean SetContactInfo(octet[] _contact);
+  boolean SetName(octet[] _name);
+  boolean SetTimeStampServer(octet[] _url, octet[] _user_name, octet[] _password);
+  boolean SignDoc(PdfDoc _doc, octet[] _path);
+};
+
+interface PdfDigSig {
+  boolean SetPfxFile(octet[] _pfx_file, octet[] _pfx_password);
+};
+PdfDigSig implements PdfBaseDigSig;
+
+interface PdfCustomDigSig {
+  boolean RegisterDigestDataProc(PdfDigestDataProc _proc, VoidPtr _data);
+};
+PdfCustomDigSig implements PdfBaseDigSig;
+
+interface PdfDoc {
+  boolean Save(octet[] _path, long _save_flags);
+  boolean SaveToStream(PsStream _stream, long _flags);
+  boolean Close();
+  boolean AddWatermarkFromImage(PdfWatermarkParams _params, PdsStream _image_obj);
+  long GetNumPages();
+  PdfPage AcquirePage(long _page_num);
+  PdfPage CreatePage(long _index, PdfRect _media_box);
+  boolean DeletePages(long _index_from, long _index_to, VoidPtr _cancel_proc, VoidPtr _cancel_data);
+  boolean InsertPages(long _index, PdfDoc _doc, long _index_from, long _index_to, long _insert_flags, VoidPtr _cancel_proc, VoidPtr _cancel_data);
+  boolean MovePage(long _index_to, long _index_from);
+  long GetNumDocumentJavaScripts();
+  long GetDocumentJavaScript(long _index, octet[] _buffer, long _len);
+  long GetDocumentJavaScriptName(long _index, octet[] _buffer, long _len);
+  long GetNumCalculatedFormFields();
+  PdfFormField GetCalculatedFormField(long _index);
+  long GetNumFormFields();
+  PdfFormField GetFormField(long _index);
+  PdfFormField GetFormFieldByName(octet[] _buffer);
+  long GetInfo(octet[] _key, octet[] _buffer, long _len);
+  boolean SetInfo(octet[] _key, octet[] _info);
+  PdfBookmark GetBookmarkRoot();
+  boolean FlattenAnnots(PdfFlattenAnnotsParams _params);
+  boolean ApplyRedaction();
+  long GetNumAlternates();
+  PdfAlternate AcquireAlternate(long _index);
+  PdsObject CreatePdsObject(PdfObjectType _type, boolean _indirect);
+  boolean AddTags(VoidPtr _cancel_proc, VoidPtr _cancel_data);
+  boolean RemoveTags(VoidPtr _cancel_proc, VoidPtr _cancel_data);
+  PdfDocTemplate GetTemplate();
+  PsMetadata GetMetadata();
+  long GetLang(octet[] _buffer, long _len);
+  boolean SetLang(octet[] _lang);
+  boolean EmbedFonts(boolean _subset, VoidPtr _cancel_proc, VoidPtr _cancel_data);
+  boolean MakeAccessible(PdfAccessibleParams _params, VoidPtr _cancel_proc, VoidPtr _cancel_data);
+  PdsDictionary GetTrailerObject();
+  PdsDictionary GetRootObject();
+  PdsDictionary GetInfoObject();
+  PdsDictionary CreateDictObject(boolean _indirect);
+  PdsArray CreateArrayObject(boolean _indirect);
+  PdsName CreateNameObject(boolean _indirect, octet[] _value);
+  PdsString CreateStringObject(boolean _indirect, octet[] _value, boolean _hex);
+  PdsNumber CreateIntObject(boolean _indirect, long _value);
+  PdsNumber CreateNumberObject(boolean _indirect, double _value);
+  PdsStream CreateStreamObject(boolean _indirect, PdsDictionary _dict, octet[] _buffer, long _size);
+  PdsStream CreateXObjectFromImage(PsStream _image_data, PdfImageFormat _format);
+  PdsObject GetObjectById(long _obj_id);
+  PdsStructTree CreateStructTree();
+  PdsStructTree GetStructTree();
+  void RemoveStructTree();
+  void RemoveBookmarks();
+  boolean CreateBookmarks(VoidPtr _cancel_proc, VoidPtr _cancel_data);
+  boolean AddFontMissingUnicode(VoidPtr _cancel_proc, VoidPtr _cancel_data);
+  PdfNameTree GetNameTree(octet[] _name, boolean _create);
+  void RemoveNameTree(octet[] _name);
+  long GetPageNumFromObject(PdsObject _page_dict);
+  PdfAnnot GetAnnotFromObject(PdsObject _annot_dict);
+  PdfAction GetActionFromObject(PdsObject _action_obj);
+  PdfViewDestination GetViewDestinationFromObject(PdsObject _dest_obj);
+};
+
+interface PdfDocTemplate {
+  boolean Update(VoidPtr _cancel_proc, VoidPtr _cancel_data);
+  boolean LoadFromStream(PsStream _stream, PsDataFormat _format);
+  boolean SaveToStream(PsStream _stream, PsDataFormat _format);
+  boolean SetDefaults();
+  double GetProperty(octet[] _name);
+  boolean SetProperty(octet[] _name, double _value);
+  long GetRegex(octet[] _name, octet[] _buffer, long _len);
+  boolean SetRegex(octet[] _name, octet[] _pattern);
+  boolean AddPage(long _page_num, VoidPtr _cancel_proc, VoidPtr _cancel_data);
+  PdfPageTemplate GetPageTemplate(long _page_num);
+};
+
+interface PdfPageTemplate {
+  long GetPageNum();
+  PdfRotate GetLogicalRotate();
+  long GetNumColumns();
+  boolean GetHeaderBBox(PdfRect _bbox);
+  boolean GetFooterBBox(PdfRect _bbox);
+};
+
+interface PdfAlternate {
+  PdfAlternateType GetSubtype();
+  long GetName(octet[] _buffer, long _len);
+  long GetDescription(octet[] _buffer, long _len);
+  long GetFileName(octet[] _buffer, long _len);
+  boolean SaveContent(octet[] _path);
+  void Release();
+};
+
+interface PdfHtmlAlternate {
+  boolean SaveResource(octet[] _resource_name, octet[] _path);
+};
+PdfHtmlAlternate implements PdfAlternate;
+
+interface PdfFont {
+  long GetFontName(octet[] _buffer, long _len);
+  long GetFaceName(octet[] _buffer, long _len);
+  void GetFontState(PdfFontState _font_state);
+  long GetSystemFontName(octet[] _buffer, long _len);
+  PdfFontCharset GetSystemFontCharset();
+  boolean GetSystemFontBold();
+  boolean GetSystemFontItalic();
+};
+
+interface PdfFormField {
+  PdfFieldType GetType();
+  long GetFlags();
+  boolean SetFlags(long _flags);
+  long GetValue(octet[] _buffer, long _len);
+  boolean SetValue(octet[] _value);
+  long GetDefaultValue(octet[] _buffer, long _len);
+  long GetFullName(octet[] _buffer, long _len);
+  long GetTooltip(octet[] _buffer, long _len);
+  long GetNumOptions();
+  long GetOptionValue(long _index, octet[] _buffer, long _len);
+  long GetOptionCaption(long _index, octet[] _buffer, long _len);
+  PdfAction GetAction();
+  PdfAction GetAAction(PdfActionEventType _event);
+  long GetMaxLength();
+  long GetWidgetExportValue(PdfAnnot _annot, octet[] _buffer, long _len);
+  PdsDictionary GetObject();
+  long GetNumExportValues();
+  long GetExportValue(long _index, octet[] _buffer, long _len);
+};
+
+interface PdfPage {
+  void Release();
+  void GetCropBox(PdfRect _crop_box);
+  void GetMediaBox(PdfRect _media_box);
+  PdfRotate GetRotate();
+  boolean SetRotate(PdfRotate _rotate);
+  PdfRotate GetLogicalRotate();
+  void GetDefaultMatrix(PdfMatrix _matrix);
+  long GetNumber();
+  PdePageMap CreatePageMap();
+  PdePageMap AcquirePageMap(VoidPtr _cancel_proc, VoidPtr _cancel_data);
+  PdfPageView AcquirePageView(double _zoom, PdfRotate _rotate);
+  long GetNumAnnots();
+  PdfAnnot GetAnnot(long _index);
+  boolean RemoveAnnot(long _index, long _flags);
+  boolean AddAnnot(long _index, PdfAnnot _annot);
+  PdfAnnot CreateAnnot(PdfAnnotSubtype _subtype, PdfRect _rect);
+  PdfTextAnnot CreateTextAnnot(PdfRect _rect);
+  PdfTextMarkupAnnot CreateTextMarkupAnnot(PdfAnnotSubtype _subtype, PdfRect _rect);
+  PdfTextAnnot AddNewTextAnnot(long _index, PdfRect _rect);
+  PdfLinkAnnot AddNewLinkAnnot(long _index, PdfRect _rect);
+  PdfTextMarkupAnnot AddNewTextMarkupAnnot(long _index, PdfRect _rect, PdfAnnotSubtype _subtype);
+  PdfAnnot AddNewAnnot(long _index, PdfRect _rect, PdfAnnotSubtype _subtype);
+  long GetNumAnnotsAtPoint(PdfPoint _point);
+  PdfAnnot GetAnnotAtPoint(PdfPoint _point, long _index);
+  long GetNumAnnotsAtRect(PdfRect _rect);
+  PdfAnnot GetAnnotAtRect(PdfRect _rect, long _index);
+  boolean DrawContent(PdfPageRenderParams _params, VoidPtr _cancel_proc, VoidPtr _cancel_data);
+  PdsContent GetContent();
+  PdsDictionary GetResources(octet[] _res_type, boolean _create);
+  PdsDictionary GetObject();
+  boolean FlattenFormXObjects();
+  long GetContentFlags();
+  boolean SetContent();
+  PdfDoc GetDoc();
+};
+
+interface PdePageMap {
+  void Release();
+  PdeElement GetElement();
+  boolean GetWhitespace(PdfWhitespaceParams _params, long _index, PdfRect _bbox);
+  void GetBBox(PdfRect _bbox);
+  boolean AcquireElements(VoidPtr _cancel_proc, VoidPtr _cancel_data);
+  PdeElement CreateElement(PdfElementType _type, PdeElement _parent);
+  boolean AddTags(PdsStructElement _element, VoidPtr _cancel_proc, VoidPtr _cancel_data);
+  PdfPage GetPage();
+};
+
+interface PdfPageView {
+  void Release();
+  long GetDeviceWidth();
+  long GetDeviceHeight();
+  void GetDeviceMatrix(PdfMatrix _matrix);
+  void RectToDevice(PdfRect _rect, PdfDevRect _dev_rect);
+  void PointToDevice(PdfPoint _point, PdfDevPoint _dev_point);
+  void RectToPage(PdfDevRect _dev_rect, PdfRect _rect);
+  void PointToPage(PdfDevPoint _dev_point, PdfPoint _point);
+};
+
+interface PdfBookmark {
+  long GetTitle(octet[] _buffer, long _len);
+  void GetAppearance(PdfBookmarkAppearance _appearance);
+  PdfAction GetAction();
+  long GetNumChildren();
+  PdfBookmark GetChild(long _index);
+  PdfBookmark GetParent();
+};
+
+interface PdfNameTree {
+  PdsObject GetObject();
+  PdsObject Lookup(octet[] _name);
+};
+
+interface PsRegex {
+  void Destroy();
+  boolean SetPattern(octet[] _pattern);
+  boolean Search(octet[] _text, long _position);
+  long GetText(octet[] _buffer, long _len);
+  long GetPosition();
+  long GetLength();
+  long GetNumMatches();
+  long GetMatchText(long _index, octet[] _buffer, long _len);
+};
+
+interface PsStream {
+  void Destroy();
+  boolean IsEof();
+  long GetSize();
+  boolean Read(long _offset, octet[] _buffer, long _size);
+  boolean Write(long _offset, octet[] _buffer, long _size);
+  long GetPos();
+  boolean Flush();
+  VoidPtr GetStream();
+  PdfStreamType GetType();
+};
+
+interface PsFileStream {
+};
+PsFileStream implements PsStream;
+
+interface PsMemoryStream {
+  boolean Resize(long _size);
+};
+PsMemoryStream implements PsStream;
+
+interface PsCustomStream {
+  void SetReadProc(PsStreamReadProc _proc);
+  void SetWriteProc(PsStreamWriteProc _proc);
+  void SetDestroyProc(PsStreamDestroyProc _proc);
+  void SetGetSizeProc(PsStreamGetSizeProc _proc);
+};
+PsCustomStream implements PsStream;
+
+interface PdsStructElement {
+  void Release();
+  long GetType(boolean _mapped, octet[] _buffer, long _len);
+  long GetActualText(octet[] _buffer, long _len);
+  boolean SetActualText(octet[] _alt);
+  long GetAlt(octet[] _buffer, long _len);
+  boolean SetAlt(octet[] _alt);
+  long GetTitle(octet[] _buffer, long _len);
+  boolean SetTitle(octet[] _title);
+  long GetAbbreviation(octet[] _buffer, long _len);
+  long GetPageNumber();
+  PdsObject GetAttrObject(long _index);
+  boolean AddAttrObj(PdsObject _object);
+  void RemoveAttrObj();
+  PdsObject GetElementObject();
+  PdsObject GetKidObject(long _index);
+  PdfStructElementType GetKidType(long _index);
+  long GetKidPageNumber(long _index);
+  long GetKidMcid(long _index);
+  long GetNumAttrObjects();
+  long GetNumKids();
+  PdsObject GetParentObject();
+  long GetId(octet[] _buffer, long _len);
+  boolean SetId(octet[] _id);
+  long GetLang(octet[] _buffer, long _len);
+  boolean SetLang(octet[] _alt);
+  boolean RemoveKid(long _index);
+  PdsStructElement CreateStructElement(octet[] _type, PdsStructElement _parent, long _index);
+  boolean SetParent(PdsStructElement _parent, long _index);
+  void AddPageObject(PdsPageObject _object, long _index);
+  void AddAnnot(PdfAnnot _annot, long _index);
+  PdsStructTree GetStructTree();
+  boolean SetType(octet[] _type);
+};
+
+interface PdsClassMap {
+  PdsObject GetAttrObject(octet[] _class_name, long _index);
+  long GetNumAttrObjects(octet[] _class_name);
+};
+
+interface PdsRoleMap {
+  boolean DoesMap(octet[] _src, octet[] _dst);
+  long GetDirectMap(octet[] _type, octet[] _buffer, long _len);
+};
+
+interface PdsStructTree {
+  PdsDictionary GetObject();
+  PdsClassMap GetClassMap();
+  PdsObject GetKidObject(long _index);
+  long GetNumKids();
+  PdsRoleMap GetRoleMap();
+  PdsStructElement AcquireStructElement(PdsObject _object);
+  boolean RemoveKid(long _index);
+  PdsStructElement CreateStructElement(octet[] _type, long _index);
+  PdfDoc GetDoc();
+  boolean UpdateParentTree();
+};
+
+interface PsMetadata {
+  boolean LoadFromStream(PsStream _stream);
+  boolean SaveToStream(PsStream _stream);
+};
+
+interface PsEvent {
+  PdfEventType GetType();
+  PdfDoc GetDoc();
+  PdfPage GetPage();
+  PdfAnnot GetAnnot();
+};
+
+interface PsAuthorization {
+  boolean SaveToStream(PsStream _stream, PsDataFormat _format);
+  boolean IsAuthorized();
+  boolean IsAuthorizedPlatform(PdfAuthPlatform _platform);
+  boolean IsAuthorizedOption(PdfAuthOption _option);
+  PdfAuthorizationType GetType();
+};
+
+interface PsAccountAuthorization {
+  boolean Authorize(octet[] _email, octet[] _serial_number);
+};
+PsAccountAuthorization implements PsAuthorization;
+
+interface PsStandardAuthorization {
+  boolean Activate(octet[] _serial_number);
+  boolean Deactivate();
+  boolean Update();
+  boolean Reset();
+};
+PsStandardAuthorization implements PsAuthorization;
+
+interface PsCommand {
+  void Destroy();
+  PsCommandStatus Execute(VoidPtr _cancel_proc, VoidPtr _cancel_data);
+  boolean LoadFromStream(PsStream _stream, PsDataFormat _format);
+  boolean SaveToStream(PsStream _stream, PsDataFormat _format);
+};
+
+interface PsImage {
+  void Destroy();
+  boolean Save(octet[] _path, PdfImageParams _params);
+  boolean SaveRect(octet[] _path, PdfImageParams _params, PdfDevRect _dev_rect);
+  boolean SaveToStream(PsStream _stream, PdfImageParams _params);
+  boolean SaveRectToStream(PsStream _stream, PdfImageParams _params, PdfDevRect _dev_rect);
+  void GetPointColor(PdfDevPoint _point, PdfRGB _color);
+  boolean SaveDataToStream(PsStream _stream);
+};
+
+interface Pdfix {
+  void Destroy();
+  PsAuthorization GetAuthorization();
+  PsStandardAuthorization GetStandardAuthorization();
+  PsAccountAuthorization GetAccountAuthorization();
+  long GetErrorType();
+  [Const] DOMString GetError();
+  void SetError(long _type, [Const] DOMString _error);
+  long GetVersionMajor();
+  long GetVersionMinor();
+  long GetVersionPatch();
+  PdfDoc CreateDoc();
+  PdfDoc OpenDoc(octet[] _path, octet[] _password);
+  PdfDoc OpenDocFromStream(PsStream _stream, octet[] _password);
+  PdfDigSig CreateDigSig();
+  PdfCustomDigSig CreateCustomDigSig();
+  PsRegex CreateRegex();
+  PsFileStream CreateFileStream(octet[] _path, PsFileMode _mode);
+  PsMemoryStream CreateMemStream();
+  PsCustomStream CreateCustomStream(PsStreamReadProc _read_proc, VoidPtr _client_data);
+  boolean RegisterEvent(PdfEventType _type, PdfEventProc _proc, VoidPtr _data);
+  boolean UnregisterEvent(PdfEventType _type, PdfEventProc _proc, VoidPtr _data);
+  PsImage CreateImage(long _width, long _height, PsImageDIBFormat _format);
+  boolean RegisterPlugin(PdfixPlugin _plugin, octet[] _name);
+  PdfixPlugin GetPluginByName(octet[] _name);
+  PsEvent GetEvent();
+  PsCommand CreateCommand(octet[] _name);
+};
+
+interface PdfixPlugin {
+  void Destroy();
+  boolean Initialize(Pdfix _pdfix);
+  long GetVersionMajor();
+  long GetVersionMinor();
+  long GetVersionPatch();
+  long GetPdfixVersionMajor();
+  long GetPdfixVersionMinor();
+  long GetPdfixVersionPatch();
+  Pdfix GetPdfix();
+};
+
+
+interface Util {
+  [Const] DOMString base64_enc(octet[] buffer, long size);
+};
+
+enum PdfHtmlType {
+  "kPdfHtmlFixed",
+  "kPdfHtmlResponsive",
+};
+
+enum PdfToHtmlEnum {
+  "kHtmlNone",
+  "kHtmlExportJavaScripts",
+  "kHtmlExportFonts",
+  "kHtmlRetainFontSize",
+  "kHtmlRetainTextColor",
+  "kHtml41Support",
+  "kHtmlNoExternalCSS",
+  "kHtmlNoExternalJS",
+  "kHtmlNoExternalIMG",
+  "kHtmlNoExternalFONT",
+  "kHtmlGrayBackground",
+  "kHtmlNoPageRender",
+};
+
+interface PdfHtmlParams {
+  attribute long flags;
+  attribute long width;
+  attribute PdfHtmlType type;
+  [Value] attribute PdfImageParams image_params;
+  void _PdfHtmlParams();
+};
+
+
+interface PdfToHtml {
+  PdfHtmlDoc OpenHtmlDoc(PdfDoc _doc);
+  boolean SaveCSS(PsStream _stream);
+  boolean SaveJavaScript(PsStream _stream);
+};
+PdfToHtml implements PdfixPlugin;
+
+interface PdfHtmlDoc {
+  boolean Close();
+  boolean Save(octet[] _path, PdfHtmlParams _params, VoidPtr _cancel_proc, VoidPtr _cancel_data);
+  boolean SaveDocHtml(PsStream _stream, PdfHtmlParams _params, VoidPtr _cancel_proc, VoidPtr _cancel_data);
+  boolean SavePageHtml(PsStream _stream, PdfHtmlParams _params, long _page_num, VoidPtr _cancel_proc, VoidPtr _cancel_data);
+};
+
+

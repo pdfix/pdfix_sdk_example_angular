@@ -26,4 +26,6 @@ info "Extracting: ${ARCHIVE_FILENAME}"
 unzip -jo $ARCHIVE_FILENAME "${PDFIX_DIR}/*"
 rm $ARCHIVE_FILENAME
 
+npm install
+
 popd
